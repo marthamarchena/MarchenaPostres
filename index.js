@@ -27,7 +27,7 @@ let precio5 = parseInt((resta(suma(precios[4].precio, 400))));
 // Precio Total
 switch (seleccion){
     case 1:
-       if (seleccion === 1)
+       (seleccion === 1)
         alert(`Elegiste Tiramisu $3.000 + $400 Envio - 10% de Descuento por tu compra Online. Total a Pagar: ${precio1}`);
         alert("Te direccionamos a MercadoPago. Muchas Gracias por tu compra y por apoyar este emprendimiento!!");
        break
@@ -58,3 +58,22 @@ if (seleccion >= 6){
     alert("Su selección fue incorrecta, por favor elija un número de la lista de productos");
 }
 
+// Agregar productos a la tienda online
+class torta {
+        constructor(nombre, precio, tipo){
+            this.nombre = nombre;
+            this.precio = precio;
+            this.tipo = tipo;
+        }
+    }
+    
+    let tortalista = [];
+    
+    for (let i = 0; i < 2; i++){
+        alert ("Agregar un nuevo producto a nuestro catálogo Online")
+        let nombre = prompt ("Ingrese el nombre del producto nuevo");
+        let precio = parseInt(prompt ("Ingrese el precio al cliente"));
+        let tipo = prompt ("Ingrese tipo de torta es: Clásica o Temática");
+    
+        tortalista.push (new torta (nombre, precio, tipo));
+    }
